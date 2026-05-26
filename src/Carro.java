@@ -5,6 +5,8 @@ public class Carro {
     String modelo;
     String cor;
     int anoFabricacao = 2022;
-    Pessoa proprietario;
+    Pessoa proprietario = new Pessoa();
+   /* Na instanciação fica como se estivese null
+    Pessoa proprietario; está como se fosse null*/
 
 }
