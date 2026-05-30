@@ -1,6 +1,6 @@
-// ATRIBUTOS E CARACTERISTICAS DO TIPO CARRO
 public class Carro {
-//NUNCA COLOQUE O NOME DO OBJETO NA IDENTIFICAÇÃO DO MESMO.
+/*Aula de debug ATENÇÃO: ao usar Step Into no debug  tomar cuidado com o step into
+caso algo tenha algo efeito colateral no sistema isso não vai ser desfeito*/
     String fabricante;
     String modelo;
     String cor;
@@ -10,14 +10,10 @@ public class Carro {
    /* Na instanciação fica como se estivese null
     Pessoa proprietario; está como se fosse null*/
 //NOS MÉTODOS SEMPRE USE O VERBO NO INFINITIVO EX:calcula = calcular
-    void calcularValorRevenda() {/* esse int é uma variavel local ela só existe
-dentro do bloco tem acesso a ela acabou a execução desse metódo ela some da memória,
-diferente das outras variavéis de instância que podem ser chamadas em outros lugares.*/
+    void calcularValorRevenda() {
         int tempoDeUsuEmAnos = 2022 - anoFabricacao;
         int vidaUtilEmAnos = 20;
-/*Esse 20  da variavel acimafoi para não deixar números soltos facilitando a
-leitura futura do código antes estava assim abaixo.
-double valorRevenda = (precoCompra / 20) * (20 - tempoDeUsuEmAnos);*/
+
 
         double valorRevenda = (precoCompra / vidaUtilEmAnos)
                 * (vidaUtilEmAnos - tempoDeUsuEmAnos);
