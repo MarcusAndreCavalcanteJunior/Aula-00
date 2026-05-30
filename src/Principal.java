@@ -27,8 +27,24 @@ public class Principal {
         seuCarro.precoCompra = 980000;
         seuCarro.proprietario = voce;
 
-        meuCarro.calcularValorRevenda();
-        seuCarro.calcularValorRevenda();
+/*double → tipo do valor que vai ser guardado
+valorRevendaMeuCarro → variável local que vai receber e guardar o resultado
+= → atribui o resultado do método à variável
+meuCarro.calcularValorRevenda() → chama o método no objeto meuCarro,
+ que calcula e devolve um double
+Chama o metódo calcularValorRevenda() do objeto meuCarro,
+que retorna um double e armazena na variável local valorRevendaMeuCarro*/
+
+        double valorRevendaMeuCarro = meuCarro.calcularValorRevenda();
+
+
+        System.out.printf("Tempo de uso (Anos): %d%n", 2022 - meuCarro.anoFabricacao);
+
+        System.out.printf("Valor de revenda: %6.2f%n", valorRevendaMeuCarro);
+
+
+   //    seuCarro.calcularValorRevenda();
+
         /*System.out.println("Meu carro");
         System.out.println("-------");
         System.out.printf("Modelo: %s%n", meuCarro.modelo);
