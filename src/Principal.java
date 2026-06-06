@@ -27,20 +27,19 @@ public class Principal {
         seuCarro.precoCompra = 980000;
         seuCarro.proprietario = voce;
 
-/*double → tipo do valor que vai ser guardado
-valorRevendaMeuCarro → variável local que vai receber e guardar o resultado
-= → atribui o resultado do método à variável
-meuCarro.calcularValorRevenda() → chama o método no objeto meuCarro,
- que calcula e devolve um double
-Chama o metódo calcularValorRevenda() do objeto meuCarro,
-que retorna um double e armazena na variável local valorRevendaMeuCarro*/
+        meuCarro.imprimirResumoDepreciacao();
+        seuCarro.imprimirResumoDepreciacao();
 
+        /* Esse treco do código pode ser resumido com 1 só linha como mostrado acima
+        para minimizar as duplicações de linhas por isso da para ir quebrando o
+        código em pequenos metódos que fazem coisas espeficicas deixando ele mais limpo
+        e bem organizado.
         double valorRevendaMeuCarro = meuCarro.calcularValorRevenda();
+        int tempoDeUsoMeuCarro = meuCarro.calcularTempoDeUsoEmAnos();
 
 
-        System.out.printf("Tempo de uso (Anos): %d%n", 2022 - meuCarro.anoFabricacao);
-
-        System.out.printf("Valor de revenda: %6.2f%n", valorRevendaMeuCarro);
+        System.out.printf("Tempo de uso (Anos): %d%n", tempoDeUsoMeuCarro);
+        System.out.printf("Valor de revenda: %6.2f%n", valorRevendaMeuCarro);*/
 
 
    //    seuCarro.calcularValorRevenda();

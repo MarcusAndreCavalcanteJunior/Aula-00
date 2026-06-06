@@ -9,11 +9,28 @@ public class Carro {
     int anoFabricacao;
     double precoCompra;
     Pessoa proprietario;
+
+    void imprimirResumoDepreciacao() {
+
+        double valorRevendaMeuCarro = calcularValorRevenda();
+        int tempoDeUsoMeuCarro = calcularTempoDeUsoEmAnos();
+
+        System.out.printf("Tempo de uso (Anos): %d%n", tempoDeUsoMeuCarro);
+        System.out.printf("Valor de revenda: %6.2f%n", valorRevendaMeuCarro);
+    }
+
+    double calcularIpva() {
+        return calcularValorRevenda() * 0.04;
+    }
+
+    int calcularTempoDeUsoEmAnos() {
+        return 2022 - anoFabricacao;
+    }
    /* Na instanciação fica como se estivese null
     Pessoa proprietario; está como se fosse null*/
 //NOS MÉTODOS SEMPRE USE O VERBO NO INFINITIVO EX:calcula = calcular
     double calcularValorRevenda() {//
-        int tempoDeUsuEmAnos = 2022 - anoFabricacao;
+        int tempoDeUsuEmAnos = calcularTempoDeUsoEmAnos();
         int vidaUtilEmAnos = 20;
 
 
