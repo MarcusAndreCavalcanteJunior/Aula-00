@@ -18,7 +18,7 @@ public class Carro {
                     "Não foi possível imprimir resumo de depreciação.");
             return;// para sair do metodo void(vazio) não precisa por valor nem nada
         }
-// Assim não executando esse trecho do código
+// Assim não executando esse trecho do código e deixando mais limpo
         System.out.printf("Tempo de uso (Anos): %d%n", tempoDeUsoMeuCarro);
         System.out.printf("Valor de revenda: %6.2f%n", valorRevendaMeuCarro);
     }
