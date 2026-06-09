@@ -1,6 +1,4 @@
-/* ATRIBUTOS E CARACTERISTICAS DO TIPO CARRO
- Aula de debug ATENÇÃO: ao usar Step Into no debug  tomar cuidado com o step into
-caso algo tenha algo efeito colateral no sistema isso não vai ser desfeito*/
+
 public class Carro {
 //NUNCA COLOQUE O NOME DO OBJETO NA IDENTIFICAÇÃO DO MESMO.
     String fabricante;
@@ -15,20 +13,28 @@ public class Carro {
         double valorRevendaMeuCarro = calcularValorRevenda();
         int tempoDeUsoMeuCarro = calcularTempoDeUsoEmAnos();
 
+        if (precoCompra <= 0) {
+            System.out.println("Carro com preço de compra zerado. " +
+                    "Não foi possível imprimir resumo de depreciação.");
+            return;// para sair do metodo void(vazio) não precisa por valor nem nada
+        }
+// Assim não executando esse trecho do código
         System.out.printf("Tempo de uso (Anos): %d%n", tempoDeUsoMeuCarro);
         System.out.printf("Valor de revenda: %6.2f%n", valorRevendaMeuCarro);
     }
 
     double calcularIpva() {
+        int tempoDeUsoEmAnos = calcularTempoDeUsoEmAnos();
+//Enxugar o codigo e deixar ele mais limpo criando a variavel
+        if (tempoDeUsoEmAnos >= 10)
+            return 0;
         return calcularValorRevenda() * 0.04;
     }
 
     int calcularTempoDeUsoEmAnos() {
         return 2022 - anoFabricacao;
     }
-   /* Na instanciação fica como se estivese null
-    Pessoa proprietario; está como se fosse null*/
-//NOS MÉTODOS SEMPRE USE O VERBO NO INFINITIVO EX:calcula = calcular
+
     double calcularValorRevenda() {//
         int tempoDeUsuEmAnos = calcularTempoDeUsoEmAnos();
         int vidaUtilEmAnos = 20;
@@ -42,12 +48,6 @@ public class Carro {
         }
 
 
-/*É bom saber que o return no final das instruções do código ou ele vai dar erro de
-compilação pois não há possibilidade do código abaixo ser executado porque o return
-é para sair de um metódo e retornar um valor, porém nem sempre o return tem de ser a
-última instrução por exemplo tbm poderiamos querer fazer um return 0; dentro do if
-mesmo não tendo nada a ver a lógica só pra saber mesmo, caso contrário usa se o
-return no final do bloco.*/
         return valorRevenda;
     }
 

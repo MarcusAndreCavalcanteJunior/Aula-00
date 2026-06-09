@@ -16,7 +16,7 @@ public class Principal {
         meuCarro.cor = "Preto";
         meuCarro.fabricante = "Honda";
         meuCarro.modelo = "HR-V";
-        meuCarro.precoCompra = 120000;
+        meuCarro.precoCompra = 0;
         meuCarro.proprietario = eu;
 
         Carro seuCarro = new Carro();
@@ -27,13 +27,13 @@ public class Principal {
         seuCarro.precoCompra = 980000;
         seuCarro.proprietario = voce;
 
+        /*double ipva = meuCarro.calcularIpva();
+        System.out.println(ipva);*/
+
         meuCarro.imprimirResumoDepreciacao();
         seuCarro.imprimirResumoDepreciacao();
 
-        /* Esse treco do código pode ser resumido com 1 só linha como mostrado acima
-        para minimizar as duplicações de linhas por isso da para ir quebrando o
-        código em pequenos metódos que fazem coisas espeficicas deixando ele mais limpo
-        e bem organizado.
+        /*
         double valorRevendaMeuCarro = meuCarro.calcularValorRevenda();
         int tempoDeUsoMeuCarro = meuCarro.calcularTempoDeUsoEmAnos();
 
